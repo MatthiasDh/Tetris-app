@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Tetris
-//
-//  Created by Daniel Defta on 11/12/2017.
-//  Copyright © 2017 Daniel Defta. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

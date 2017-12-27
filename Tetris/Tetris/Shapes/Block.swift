@@ -20,6 +20,7 @@ class Block {
     var sprite4: SKSpriteNode?
     
     var TileHeight: CGFloat
+    var TileWidth: CGFloat
     var spriteName: String?
     
     init(column: Int, row: Int, vertical: Bool) {
@@ -27,24 +28,25 @@ class Block {
         self.row = row
         self.vertical = vertical;
         self.TileHeight = 40
+        self.TileWidth = 40
     }
     
-    func rotate() {
-        
-    }
-    
-    func move() {
-        
-    }
-    
+    func rotate() {}
+    func move() {}
     func moveLeft(){}
     func moveRight(){}
     
-    func checkBlocksOnderaan(blocksLayer: SKNode) -> Bool {
+    func checkBlocksUnder(blocksLayer: SKNode) -> Bool {
+        return false
+    }
+    
+    func checkBlocksLeft(blocksLayer: SKNode) -> Bool {
         return false;
     }
     
-    func addSprites(blocksLayer: SKNode){
-        
+    func checkBlocksRight(blocksLayer: SKNode) -> Bool {
+        return false;
     }
+    
+    func addSprites(blocksLayer: SKNode){}
 }

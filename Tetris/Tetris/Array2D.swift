@@ -1,11 +1,3 @@
-//
-//  Array2D.swift
-//  Tetris
-//
-//  Created by Daniel Defta on 12/12/2017.
-//  Copyright © 2017 Daniel Defta. All rights reserved.
-//
-
 struct Array2D<T> {
     let columns: Int
     let rows: Int

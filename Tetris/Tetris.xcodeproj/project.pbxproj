@@ -11,12 +11,11 @@
 		0C82D6EA1FE08294008AB6A4 /* MirroredLShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C82D6E91FE08294008AB6A4 /* MirroredLShape.swift */; };
 		0CF285751FE2BD0D006DE6DA /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF285741FE2BD0D006DE6DA /* SShape.swift */; };
 		0CF285771FE2BD7F006DE6DA /* LShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF285761FE2BD7F006DE6DA /* LShape.swift */; };
+		0CFDA40A1FF011510050D8B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFDA4091FF011510050D8B9 /* LoginViewController.swift */; };
 		E289C2311FDF4BD6005CB8F8 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C2301FDF4BD6005CB8F8 /* Array2D.swift */; };
-		E289C2331FDF4C2B005CB8F8 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C2321FDF4C2B005CB8F8 /* Level.swift */; };
 		E289C2351FDF4CE9005CB8F8 /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C2341FDF4CE9005CB8F8 /* LineShape.swift */; };
 		E289C23C1FDFA8C0005CB8F8 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C23B1FDFA8C0005CB8F8 /* Block.swift */; };
 		E289C23E1FDFDE79005CB8F8 /* SquareShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C23D1FDFDE79005CB8F8 /* SquareShape.swift */; };
-		E289C2401FE0071A005CB8F8 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E289C23F1FE00719005CB8F8 /* Sprites.atlas */; };
 		E289C2441FE0375A005CB8F8 /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C2431FE0375A005CB8F8 /* ZShape.swift */; };
 		E2D581781FDF2948004D0E97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D581771FDF2948004D0E97 /* AppDelegate.swift */; };
 		E2D5817E1FDF2948004D0E97 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D5817D1FDF2948004D0E97 /* GameScene.swift */; };
@@ -31,12 +30,11 @@
 		0C82D6E91FE08294008AB6A4 /* MirroredLShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MirroredLShape.swift; sourceTree = "<group>"; };
 		0CF285741FE2BD0D006DE6DA /* SShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
 		0CF285761FE2BD7F006DE6DA /* LShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LShape.swift; sourceTree = "<group>"; };
+		0CFDA4091FF011510050D8B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E289C2301FDF4BD6005CB8F8 /* Array2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
-		E289C2321FDF4C2B005CB8F8 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		E289C2341FDF4CE9005CB8F8 /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
 		E289C23B1FDFA8C0005CB8F8 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		E289C23D1FDFDE79005CB8F8 /* SquareShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareShape.swift; sourceTree = "<group>"; };
-		E289C23F1FE00719005CB8F8 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 		E289C2431FE0375A005CB8F8 /* ZShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
 		E2D581741FDF2948004D0E97 /* Tetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D581771FDF2948004D0E97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +72,15 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
+		0CFDA4021FEFED920050D8B9 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2D5817F1FDF2948004D0E97 /* GameViewController.swift */,
+				0CFDA4091FF011510050D8B9 /* LoginViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
 		E2D5816B1FDF2948004D0E97 = {
 			isa = PBXGroup;
 			children = (
@@ -93,17 +100,15 @@
 		E2D581761FDF2948004D0E97 /* Tetris */ = {
 			isa = PBXGroup;
 			children = (
+				0CFDA4021FEFED920050D8B9 /* controllers */,
 				0C82D6E61FE02F28008AB6A4 /* Shapes */,
 				E2D581771FDF2948004D0E97 /* AppDelegate.swift */,
 				E2D5817D1FDF2948004D0E97 /* GameScene.swift */,
 				E289C2301FDF4BD6005CB8F8 /* Array2D.swift */,
-				E289C2321FDF4C2B005CB8F8 /* Level.swift */,
-				E2D5817F1FDF2948004D0E97 /* GameViewController.swift */,
 				E2D581811FDF2948004D0E97 /* Main.storyboard */,
 				E2D581841FDF2948004D0E97 /* Assets.xcassets */,
 				E2D581861FDF2948004D0E97 /* LaunchScreen.storyboard */,
 				E2D581891FDF2948004D0E97 /* Info.plist */,
-				E289C23F1FE00719005CB8F8 /* Sprites.atlas */,
 			);
 			path = Tetris;
 			sourceTree = "<group>";
@@ -170,7 +175,6 @@
 				E2D581831FDF2948004D0E97 /* Main.storyboard in Resources */,
 				E2D581851FDF2948004D0E97 /* Assets.xcassets in Resources */,
 				E2D581881FDF2948004D0E97 /* LaunchScreen.storyboard in Resources */,
-				E289C2401FE0071A005CB8F8 /* Sprites.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFDA40A1FF011510050D8B9 /* LoginViewController.swift in Sources */,
 				E2D5817E1FDF2948004D0E97 /* GameScene.swift in Sources */,
 				E289C23C1FDFA8C0005CB8F8 /* Block.swift in Sources */,
 				0C82D6EA1FE08294008AB6A4 /* MirroredLShape.swift in Sources */,
@@ -192,7 +197,6 @@
 				E2D581801FDF2948004D0E97 /* GameViewController.swift in Sources */,
 				0C82D6E51FE02F19008AB6A4 /* TShape.swift in Sources */,
 				0CF285771FE2BD7F006DE6DA /* LShape.swift in Sources */,
-				E289C2331FDF4C2B005CB8F8 /* Level.swift in Sources */,
 				E2D581781FDF2948004D0E97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,11 +335,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q2XUX4UH28;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tetris/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = be.danieldefta.Tetris;
+				PRODUCT_BUNDLE_IDENTIFIER = be.matthiasdhaeseleer.Tetris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -347,11 +351,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q2XUX4UH28;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tetris/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = be.danieldefta.Tetris;
+				PRODUCT_BUNDLE_IDENTIFIER = be.matthiasdhaeseleer.Tetris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,11 +1,3 @@
-//
-//  Cookie.swift
-//  Tetris
-//
-//  Created by Daniel Defta on 12/12/2017.
-//  Copyright © 2017 Daniel Defta. All rights reserved.
-//
-
 import Foundation
 import SpriteKit
 
@@ -25,22 +17,27 @@ class SquareShape : Block {
     }
     
     override func move() {
+        self.row = self.row - 1
         sprite1?.position.y = (sprite1?.position.y)!-self.TileHeight;
         sprite2?.position.y = (sprite2?.position.y)!-self.TileHeight;
         sprite3?.position.y = (sprite3?.position.y)!-self.TileHeight;
         sprite4?.position.y = (sprite4?.position.y)!-self.TileHeight;
     }
     override func moveLeft() {
-        sprite1?.position.x = (sprite1?.position.x)!-self.TileHeight;
-        sprite2?.position.x = (sprite2?.position.x)!-self.TileHeight;
-        sprite3?.position.x = (sprite3?.position.x)!-self.TileHeight;
-        sprite4?.position.x = (sprite4?.position.x)!-self.TileHeight;
+        if((sprite1?.position.x)! >= TileWidth/2 && (sprite2?.position.x)! >= TileWidth/2 && (sprite3?.position.x)! >= TileWidth/2 && (sprite4?.position.x)! >= TileWidth/2){
+            sprite1?.position.x = (sprite1?.position.x)!-self.TileHeight;
+            sprite2?.position.x = (sprite2?.position.x)!-self.TileHeight;
+            sprite3?.position.x = (sprite3?.position.x)!-self.TileHeight;
+            sprite4?.position.x = (sprite4?.position.x)!-self.TileHeight;
+        }
     }
     override func moveRight() {
-        sprite1?.position.x = (sprite1?.position.x)!+self.TileHeight;
-        sprite2?.position.x = (sprite2?.position.x)!+self.TileHeight;
-        sprite3?.position.x = (sprite3?.position.x)!+self.TileHeight;
-        sprite4?.position.x = (sprite4?.position.x)!+self.TileHeight;
+        if((sprite1?.position.x)! <= 271 && (sprite2?.position.x)! <= 271 && (sprite3?.position.x)! <= 271 && (sprite4?.position.x)! <= 271){
+            sprite1?.position.x = (sprite1?.position.x)!+self.TileHeight;
+            sprite2?.position.x = (sprite2?.position.x)!+self.TileHeight;
+            sprite3?.position.x = (sprite3?.position.x)!+self.TileHeight;
+            sprite4?.position.x = (sprite4?.position.x)!+self.TileHeight;
+        }
     }
     
     override func addSprites(blocksLayer: SKNode) {
@@ -72,9 +69,9 @@ class SquareShape : Block {
             y: CGFloat(row) * TileHeight + TileHeight/2)
     }
     
-    override func checkBlocksOnderaan(blocksLayer: SKNode) -> Bool {
+    override func checkBlocksUnder(blocksLayer: SKNode) -> Bool {
         var ret: Bool = false;
-        if ( (sprite1?.position.y)! <= CGFloat.init(TileHeight) || (sprite3?.position.y)! <= CGFloat.init(TileHeight)){
+        if ( (sprite1?.position.y)! <= CGFloat.init(TileHeight) || (sprite2?.position.y)! <= CGFloat.init(TileHeight) || (sprite3?.position.y)! <= CGFloat.init(TileHeight) || (sprite4?.position.y)! <= CGFloat.init(TileHeight)){
             ret = true
         }
         else {
@@ -98,5 +95,50 @@ class SquareShape : Block {
         }
         return ret;
     }
+    
+    override func checkBlocksRight(blocksLayer: SKNode) -> Bool {
+        var ret: Bool = false;
+        blocksLayer.enumerateChildNodes(withName: "//block") {
+            node, _ in
+            if node != self.sprite1 && node != self.sprite2 && node != self.sprite3 && node != self.sprite4 {
+                if (self.sprite1?.position.y == node.position.y) && ((self.sprite1?.position.y)! >= node.position.x - self.TileHeight*1.5) && ((self.sprite1?.position.x)! < node.position.x){
+                    ret = true;
+                }
+                if (self.sprite2?.position.y == node.position.y) && ((self.sprite2?.position.x)! >= node.position.x - self.TileHeight*1.5) && ((self.sprite2?.position.x)! < node.position.x){
+                    ret = true;
+                }
+                if (self.sprite3?.position.y == node.position.y) && ((self.sprite3?.position.x)! >= node.position.x - self.TileHeight*1.5) && ((self.sprite3?.position.x)! < node.position.x){
+                    ret = true;
+                }
+                if (self.sprite4?.position.y == node.position.y) && ((self.sprite4?.position.x)! >= node.position.x - self.TileHeight*1.5) && ((self.sprite4?.position.x)! < node.position.x){
+                    ret = true;
+                }
+            }
+        }
+        return ret;
+    }
+    
+    override func checkBlocksLeft(blocksLayer: SKNode) -> Bool {
+        var ret: Bool = false;
+        blocksLayer.enumerateChildNodes(withName: "//block") {
+            node, _ in
+            if node != self.sprite1 && node != self.sprite2 && node != self.sprite3 && node != self.sprite4 {
+                if (self.sprite1?.position.y == node.position.y) && ((self.sprite1?.position.y)! <= node.position.x + self.TileHeight*1.5) && ((self.sprite1?.position.x)! > node.position.x){
+                    ret = true;
+                }
+                if (self.sprite2?.position.y == node.position.y) && ((self.sprite2?.position.x)! <= node.position.x + self.TileHeight*1.5) && ((self.sprite2?.position.x)! > node.position.x){
+                    ret = true;
+                }
+                if (self.sprite3?.position.y == node.position.y) && ((self.sprite3?.position.x)! <= node.position.x + self.TileHeight*1.5) && ((self.sprite3?.position.x)! > node.position.x){
+                    ret = true;
+                }
+                if (self.sprite4?.position.y == node.position.y) && ((self.sprite4?.position.x)! <= node.position.x + self.TileHeight*1.5) && ((self.sprite4?.position.x)! > node.position.x){
+                    ret = true;
+                }
+            }
+        }
+        return ret;
+    }
+    
 }
 
