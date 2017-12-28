@@ -3,10 +3,9 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     var scene: GameScene!
-    var score: Int = 0
+    var highscore: Int = 0
     
     @IBOutlet weak var lblScore: UILabel!
-    
     @IBOutlet weak var imgBufferBlock: UIImageView!
     
     override var prefersStatusBarHidden: Bool {
@@ -23,7 +22,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Configure the view that displays spritecontent.
         let skView = view as! SKView
         skView.isMultipleTouchEnabled = false
@@ -39,17 +38,30 @@ class GameViewController: UIViewController {
         // Present the scene.
         skView.presentScene(scene)
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+    }
     
     func handleFullLine(_ row: Int, _ score: Int) {
         let position : CGPoint = scene.pointFor(column:13,row:20)
         scene.animatePointsLine(row,score,position)
         {
-            self.score = self.score + score
-            self.lblScore.text = String(self.score)
+            self.highscore = self.highscore + score
+            self.lblScore.text = String(self.highscore)
         }
     }
     
     func handleBufferBlock(_ type: String){
         self.imgBufferBlock.image = UIImage.init(named: type)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //If we can't cast the destination as a gameviewcontroller then quit
+        guard let startVC = segue.destination as? StartViewController else { return }
+        //Check if it is a highscore
+        if(self.highscore > Int(startVC.score)!){
+            startVC.score = lblScore.text!
+        }
     }
 }

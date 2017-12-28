@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0B2B141FF519B20008B988 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B131FF519B20008B988 /* StartViewController.swift */; };
+		0C0B2B191FF51E690008B988 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B181FF51E690008B988 /* UIButtonExtension.swift */; };
 		0C82D6E51FE02F19008AB6A4 /* TShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C82D6E41FE02F19008AB6A4 /* TShape.swift */; };
 		0C82D6EA1FE08294008AB6A4 /* MirroredLShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C82D6E91FE08294008AB6A4 /* MirroredLShape.swift */; };
 		0CF285751FE2BD0D006DE6DA /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF285741FE2BD0D006DE6DA /* SShape.swift */; };
 		0CF285771FE2BD7F006DE6DA /* LShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF285761FE2BD7F006DE6DA /* LShape.swift */; };
-		0CFDA40A1FF011510050D8B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFDA4091FF011510050D8B9 /* LoginViewController.swift */; };
 		E289C2311FDF4BD6005CB8F8 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C2301FDF4BD6005CB8F8 /* Array2D.swift */; };
 		E289C2351FDF4CE9005CB8F8 /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C2341FDF4CE9005CB8F8 /* LineShape.swift */; };
 		E289C23C1FDFA8C0005CB8F8 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C23B1FDFA8C0005CB8F8 /* Block.swift */; };
@@ -26,11 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C0B2B131FF519B20008B988 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		0C0B2B181FF51E690008B988 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		0C82D6E41FE02F19008AB6A4 /* TShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
 		0C82D6E91FE08294008AB6A4 /* MirroredLShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MirroredLShape.swift; sourceTree = "<group>"; };
 		0CF285741FE2BD0D006DE6DA /* SShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
 		0CF285761FE2BD7F006DE6DA /* LShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LShape.swift; sourceTree = "<group>"; };
-		0CFDA4091FF011510050D8B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E289C2301FDF4BD6005CB8F8 /* Array2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
 		E289C2341FDF4CE9005CB8F8 /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
 		E289C23B1FDFA8C0005CB8F8 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0B2B151FF51CC80008B988 /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				0C0B2B181FF51E690008B988 /* UIButtonExtension.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
 		0C82D6E61FE02F28008AB6A4 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,13 +82,13 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
-		0CFDA4021FEFED920050D8B9 /* controllers */ = {
+		0CFDA4021FEFED920050D8B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				E2D5817F1FDF2948004D0E97 /* GameViewController.swift */,
-				0CFDA4091FF011510050D8B9 /* LoginViewController.swift */,
+				0C0B2B131FF519B20008B988 /* StartViewController.swift */,
 			);
-			path = controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E2D5816B1FDF2948004D0E97 = {
@@ -100,7 +110,8 @@
 		E2D581761FDF2948004D0E97 /* Tetris */ = {
 			isa = PBXGroup;
 			children = (
-				0CFDA4021FEFED920050D8B9 /* controllers */,
+				0C0B2B151FF51CC80008B988 /* CustomControls */,
+				0CFDA4021FEFED920050D8B9 /* Controllers */,
 				0C82D6E61FE02F28008AB6A4 /* Shapes */,
 				E2D581771FDF2948004D0E97 /* AppDelegate.swift */,
 				E2D5817D1FDF2948004D0E97 /* GameScene.swift */,
@@ -185,7 +196,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CFDA40A1FF011510050D8B9 /* LoginViewController.swift in Sources */,
 				E2D5817E1FDF2948004D0E97 /* GameScene.swift in Sources */,
 				E289C23C1FDFA8C0005CB8F8 /* Block.swift in Sources */,
 				0C82D6EA1FE08294008AB6A4 /* MirroredLShape.swift in Sources */,
@@ -194,8 +204,10 @@
 				E289C23E1FDFDE79005CB8F8 /* SquareShape.swift in Sources */,
 				E289C2441FE0375A005CB8F8 /* ZShape.swift in Sources */,
 				0CF285751FE2BD0D006DE6DA /* SShape.swift in Sources */,
+				0C0B2B141FF519B20008B988 /* StartViewController.swift in Sources */,
 				E2D581801FDF2948004D0E97 /* GameViewController.swift in Sources */,
 				0C82D6E51FE02F19008AB6A4 /* TShape.swift in Sources */,
+				0C0B2B191FF51E690008B988 /* UIButtonExtension.swift in Sources */,
 				0CF285771FE2BD7F006DE6DA /* LShape.swift in Sources */,
 				E2D581781FDF2948004D0E97 /* AppDelegate.swift in Sources */,
 			);

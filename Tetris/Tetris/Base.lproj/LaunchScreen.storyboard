@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GillSans.ttc">
+            <string>GillSans-UltraBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -18,22 +23,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="image-zoom" translatesAutoresizingMaskIntoConstraints="NO" id="MpF-iG-Zye">
-                                <rect key="frame" x="52" y="238" width="270" height="190"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_start" translatesAutoresizingMaskIntoConstraints="NO" id="efT-9S-nSt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Tetris..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLB-FS-dXj">
-                                <rect key="frame" x="127" y="596.5" width="121.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading Tetris..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLB-FS-dXj">
+                                <rect key="frame" x="45" y="469" width="285.5" height="37"/>
+                                <fontDescription key="fontDescription" name="GillSans-UltraBold" family="Gill Sans" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="2" height="2"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MpF-iG-Zye" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ZCa-KB-9el"/>
+                            <constraint firstItem="efT-9S-nSt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2jJ-cC-FIH"/>
+                            <constraint firstItem="efT-9S-nSt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EPZ-Tn-ilU"/>
+                            <constraint firstItem="efT-9S-nSt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="V5A-b6-g4z"/>
                             <constraint firstItem="TLB-FS-dXj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="aTG-8m-qiV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TLB-FS-dXj" secondAttribute="bottom" constant="50" id="gVE-MN-cyI"/>
-                            <constraint firstItem="MpF-iG-Zye" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hMO-fq-Wi2"/>
+                            <constraint firstItem="efT-9S-nSt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="n6j-lj-WDi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -44,6 +53,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image-zoom" width="150" height="100"/>
+        <image name="background_start" width="1080" height="1920"/>
     </resources>
 </document>

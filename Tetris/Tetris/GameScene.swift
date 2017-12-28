@@ -18,7 +18,7 @@ class GameScene: SKScene {
     
     var isFirstBlock = true
     var isGameOver = false
-    var MoveDelay = 0.3
+    var MoveDelay = 0.15
     var LeftMoveDelay = 0.0
     var RightMoveDelay = 0.0
     var moveLeftAllowed = false
@@ -154,6 +154,7 @@ class GameScene: SKScene {
             if let handler = BufferBlockHandler {
                 handler(textType)
             }
+            
             addSprites()
             let rot = arc4random_uniform(4);
             for _ in 0...Int(rot){
@@ -177,7 +178,7 @@ class GameScene: SKScene {
                 }else{
                     block.move()
                 }
-                self.MoveDelay = 0.3
+                self.MoveDelay = 0.15
             }
             
             if moveLeftAllowed {
