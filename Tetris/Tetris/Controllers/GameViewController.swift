@@ -5,8 +5,18 @@ class GameViewController: UIViewController {
     var scene: GameScene!
     var highscore: Int = 0
     
+    @IBOutlet weak var txtLevel: UILabel!
     @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var imgBufferBlock: UIImageView!
+    @IBOutlet weak var txtLinesCleared: UILabel!
+    
+    @IBAction func exitGame(_ sender: UIButton) {
+        self.scene.removeAllActions()
+        self.scene.removeAllChildren()
+        self.scene.removeFromParent()
+        self.scene = nil
+        handleGameOver()
+    }
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -22,7 +32,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Configure the view that displays spritecontent.
         let skView = view as! SKView
         skView.isMultipleTouchEnabled = false
@@ -35,6 +45,7 @@ class GameViewController: UIViewController {
         scene.FullLineHandler = handleFullLine
         scene.BufferBlockHandler = handleBufferBlock
         scene.generateBlock()
+        
         // Present the scene.
         skView.presentScene(scene)
     }
@@ -42,12 +53,14 @@ class GameViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
     }
     
-    func handleFullLine(_ row: Int, _ score: Int) {
+    func handleFullLine(_ row: Int, _ score: Int, _ linesCleared: Int, _ level: Int) {
         let position : CGPoint = scene.pointFor(column:13,row:20)
         scene.animatePointsLine(row,score,position)
         {
             self.highscore = self.highscore + score
             self.lblScore.text = String(self.highscore)
+            self.txtLinesCleared.text = String(linesCleared)
+            self.txtLevel.text = String(level)
         }
     }
     
@@ -55,13 +68,7 @@ class GameViewController: UIViewController {
         self.imgBufferBlock.image = UIImage.init(named: type)
     }
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //If we can't cast the destination as a gameviewcontroller then quit
-        guard let startVC = segue.destination as? StartViewController else { return }
-        //Check if it is a highscore
-        if(self.highscore > Int(startVC.score)!){
-            startVC.score = lblScore.text!
-        }
+    func handleGameOver() {
+        
     }
 }

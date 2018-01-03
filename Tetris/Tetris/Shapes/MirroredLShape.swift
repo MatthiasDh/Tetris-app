@@ -59,18 +59,24 @@ class MirroredLShape : Block {
     }
     override func moveLeft() {
         if((sprite1?.position.x)! >= TileWidth/2 && (sprite2?.position.x)! >= TileWidth/2 && (sprite3?.position.x)! >= TileWidth/2 && (sprite4?.position.x)! >= TileWidth/2){
+            self.mayRotate = true
             sprite1?.position.x = (sprite1?.position.x)!-self.TileHeight;
             sprite2?.position.x = (sprite2?.position.x)!-self.TileHeight;
             sprite3?.position.x = (sprite3?.position.x)!-self.TileHeight;
             sprite4?.position.x = (sprite4?.position.x)!-self.TileHeight;
+        }else{
+            self.mayRotate = false
         }
     }
     override func moveRight() {
         if((sprite1?.position.x)! <= 271 && (sprite2?.position.x)! <= 271 && (sprite3?.position.x)! <= 271 && (sprite4?.position.x)! <= 271){
+            self.mayRotate = true
             sprite1?.position.x = (sprite1?.position.x)!+self.TileHeight;
             sprite2?.position.x = (sprite2?.position.x)!+self.TileHeight;
             sprite3?.position.x = (sprite3?.position.x)!+self.TileHeight;
             sprite4?.position.x = (sprite4?.position.x)!+self.TileHeight;
+        }else{
+            self.mayRotate = false
         }
     }
     

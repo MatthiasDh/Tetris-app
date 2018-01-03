@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		0C0B2B141FF519B20008B988 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B131FF519B20008B988 /* StartViewController.swift */; };
 		0C0B2B191FF51E690008B988 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B181FF51E690008B988 /* UIButtonExtension.swift */; };
+		0C0B2B251FF691500008B988 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B241FF691500008B988 /* Player.swift */; };
+		0C0B2B271FF6ACB10008B988 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B261FF6ACB10008B988 /* PlayersViewController.swift */; };
+		0C0B2B2F1FF6B4AD0008B988 /* NewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B2E1FF6B4AD0008B988 /* NewPlayerViewController.swift */; };
+		0C0B2B321FF7CC130008B988 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B311FF7CC130008B988 /* PlayerCell.swift */; };
 		0C82D6E51FE02F19008AB6A4 /* TShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C82D6E41FE02F19008AB6A4 /* TShape.swift */; };
 		0C82D6EA1FE08294008AB6A4 /* MirroredLShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C82D6E91FE08294008AB6A4 /* MirroredLShape.swift */; };
 		0CF285751FE2BD0D006DE6DA /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF285741FE2BD0D006DE6DA /* SShape.swift */; };
 		0CF285771FE2BD7F006DE6DA /* LShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF285761FE2BD7F006DE6DA /* LShape.swift */; };
+		2F9E7F5F960A2CCD07C92335 /* Pods_Tetris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF014344A7E789A1476762A /* Pods_Tetris.framework */; };
 		E289C2311FDF4BD6005CB8F8 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C2301FDF4BD6005CB8F8 /* Array2D.swift */; };
 		E289C2351FDF4CE9005CB8F8 /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C2341FDF4CE9005CB8F8 /* LineShape.swift */; };
 		E289C23C1FDFA8C0005CB8F8 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289C23B1FDFA8C0005CB8F8 /* Block.swift */; };
@@ -29,10 +34,17 @@
 /* Begin PBXFileReference section */
 		0C0B2B131FF519B20008B988 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0C0B2B181FF51E690008B988 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		0C0B2B241FF691500008B988 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		0C0B2B261FF6ACB10008B988 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		0C0B2B2E1FF6B4AD0008B988 /* NewPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerViewController.swift; sourceTree = "<group>"; };
+		0C0B2B311FF7CC130008B988 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		0C82D6E41FE02F19008AB6A4 /* TShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
 		0C82D6E91FE08294008AB6A4 /* MirroredLShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MirroredLShape.swift; sourceTree = "<group>"; };
 		0CF285741FE2BD0D006DE6DA /* SShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
 		0CF285761FE2BD7F006DE6DA /* LShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LShape.swift; sourceTree = "<group>"; };
+		4CBB26CE46908444B15FCA13 /* Pods-Tetris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tetris.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tetris/Pods-Tetris.release.xcconfig"; sourceTree = "<group>"; };
+		5EF014344A7E789A1476762A /* Pods_Tetris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tetris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68F2607E503C184B777E1446 /* Pods-Tetris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tetris.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tetris/Pods-Tetris.debug.xcconfig"; sourceTree = "<group>"; };
 		E289C2301FDF4BD6005CB8F8 /* Array2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
 		E289C2341FDF4CE9005CB8F8 /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
 		E289C23B1FDFA8C0005CB8F8 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
@@ -53,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F9E7F5F960A2CCD07C92335 /* Pods_Tetris.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,22 @@
 				0C0B2B181FF51E690008B988 /* UIButtonExtension.swift */,
 			);
 			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		0C0B2B231FF6913C0008B988 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C0B2B241FF691500008B988 /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C0B2B301FF7CC070008B988 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C0B2B311FF7CC130008B988 /* PlayerCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0C82D6E61FE02F28008AB6A4 /* Shapes */ = {
@@ -87,8 +116,27 @@
 			children = (
 				E2D5817F1FDF2948004D0E97 /* GameViewController.swift */,
 				0C0B2B131FF519B20008B988 /* StartViewController.swift */,
+				0C0B2B261FF6ACB10008B988 /* PlayersViewController.swift */,
+				0C0B2B2E1FF6B4AD0008B988 /* NewPlayerViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2ED5CB8B61377F6D3AC91B6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68F2607E503C184B777E1446 /* Pods-Tetris.debug.xcconfig */,
+				4CBB26CE46908444B15FCA13 /* Pods-Tetris.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C964A2C92A9493F7128BE8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EF014344A7E789A1476762A /* Pods_Tetris.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E2D5816B1FDF2948004D0E97 = {
@@ -96,6 +144,8 @@
 			children = (
 				E2D581761FDF2948004D0E97 /* Tetris */,
 				E2D581751FDF2948004D0E97 /* Products */,
+				2ED5CB8B61377F6D3AC91B6E /* Pods */,
+				7C964A2C92A9493F7128BE8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +160,8 @@
 		E2D581761FDF2948004D0E97 /* Tetris */ = {
 			isa = PBXGroup;
 			children = (
+				0C0B2B301FF7CC070008B988 /* View */,
+				0C0B2B231FF6913C0008B988 /* Model */,
 				0C0B2B151FF51CC80008B988 /* CustomControls */,
 				0CFDA4021FEFED920050D8B9 /* Controllers */,
 				0C82D6E61FE02F28008AB6A4 /* Shapes */,
@@ -131,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2D5818C1FDF2948004D0E97 /* Build configuration list for PBXNativeTarget "Tetris" */;
 			buildPhases = (
+				E5B19A31309040753CC2C06E /* [CP] Check Pods Manifest.lock */,
 				E2D581701FDF2948004D0E97 /* Sources */,
 				E2D581711FDF2948004D0E97 /* Frameworks */,
 				E2D581721FDF2948004D0E97 /* Resources */,
+				C391C57F0213421068BCE42D /* [CP] Embed Pods Frameworks */,
+				6700D144A117B18F3563FF67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +246,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6700D144A117B18F3563FF67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tetris/Pods-Tetris-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C391C57F0213421068BCE42D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tetris/Pods-Tetris-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tetris/Pods-Tetris-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B19A31309040753CC2C06E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tetris-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E2D581701FDF2948004D0E97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -201,14 +312,18 @@
 				0C82D6EA1FE08294008AB6A4 /* MirroredLShape.swift in Sources */,
 				E289C2351FDF4CE9005CB8F8 /* LineShape.swift in Sources */,
 				E289C2311FDF4BD6005CB8F8 /* Array2D.swift in Sources */,
+				0C0B2B271FF6ACB10008B988 /* PlayersViewController.swift in Sources */,
 				E289C23E1FDFDE79005CB8F8 /* SquareShape.swift in Sources */,
+				0C0B2B2F1FF6B4AD0008B988 /* NewPlayerViewController.swift in Sources */,
 				E289C2441FE0375A005CB8F8 /* ZShape.swift in Sources */,
 				0CF285751FE2BD0D006DE6DA /* SShape.swift in Sources */,
 				0C0B2B141FF519B20008B988 /* StartViewController.swift in Sources */,
 				E2D581801FDF2948004D0E97 /* GameViewController.swift in Sources */,
+				0C0B2B321FF7CC130008B988 /* PlayerCell.swift in Sources */,
 				0C82D6E51FE02F19008AB6A4 /* TShape.swift in Sources */,
 				0C0B2B191FF51E690008B988 /* UIButtonExtension.swift in Sources */,
 				0CF285771FE2BD7F006DE6DA /* LShape.swift in Sources */,
+				0C0B2B251FF691500008B988 /* Player.swift in Sources */,
 				E2D581781FDF2948004D0E97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +459,7 @@
 		};
 		E2D5818D1FDF2948004D0E97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F2607E503C184B777E1446 /* Pods-Tetris.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -360,6 +476,7 @@
 		};
 		E2D5818E1FDF2948004D0E97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CBB26CE46908444B15FCA13 /* Pods-Tetris.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

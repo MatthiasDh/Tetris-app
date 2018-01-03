@@ -3,19 +3,23 @@ import SpriteKit
 class GameScene: SKScene {
     var TileWidth: CGFloat
     var TileHeight: CGFloat
-    var FullLineHandler: ((Int,Int) -> ())?
+    var FullLineHandler: ((Int,Int,Int,Int) -> ())?
     var BufferBlockHandler: ((String) -> ())?
+    var GameOverHandler: (() -> ())?
     
     //Geheel
-    let gameLayer = SKNode()
+    var gameLayer = SKNode()
     //Tiles layer (image background)
-    let tilesLayer = SKNode()
+    var tilesLayer = SKNode()
     //Actual blocks
-    let blocksLayer = SKNode()
+    var blocksLayer = SKNode()
     
     let NumColumns = 11
     let NumRows = 22
     
+    var currentScore = 0
+    var level = 1
+    var linesCleared = 0
     var isFirstBlock = true
     var isGameOver = false
     var MoveDelay = 0.15
@@ -50,11 +54,9 @@ class GameScene: SKScene {
         addChild(background)
         
         addChild(gameLayer)
-        
         let layerPosition = CGPoint(
             x: -TileWidth * CGFloat(NumColumns) / 1.5,
             y: -TileHeight * CGFloat(NumRows)/1.8)
-        
         blocksLayer.position = layerPosition
         tilesLayer.position = layerPosition
         gameLayer.addChild(tilesLayer)
@@ -106,16 +108,46 @@ class GameScene: SKScene {
         var textType = ""
         let col = arc4random_uniform(5)+2
         let type = Int(arc4random_uniform(6))
-        //let type = 0
+        //let type = 5
         
         if(self.block != nil){
             if(self.block.row >= 22) {
                 self.isGameOver = true
+                if let handler = GameOverHandler {
+                    handler()
+                }
             }
         }
         
         if(isFirstBlock) {
-            self.bufferBlock = LineShape(column: Int(col), row: 25, vertical: true)
+            if (type == 0) {
+                textType = "LineShape_img"
+                self.bufferBlock = LineShape(column: Int(col), row: 25, vertical: true)
+            }
+            else if type == 1 {
+                textType = "SquareShape_img"
+                self.bufferBlock = SquareShape(column: Int(col), row: 25, vertical: true)
+            }
+            else if type == 2 {
+                textType = "TShape_img"
+                self.bufferBlock = TShape(column: Int(col), row: 25, vertical: true)
+            }
+            else if type == 3 {
+                textType = "ZShape_img"
+                self.bufferBlock = ZShape(column: Int(col), row: 25, vertical: true)
+            }
+            else if type == 4 {
+                textType = "MirroredLShape_img"
+                self.bufferBlock = MirroredLShape(column: Int(col), row: 25, vertical: true)
+            }
+            else if type == 5 {
+                textType = "LShape_img"
+                self.bufferBlock = LShape(column: Int(col),row: 25, vertical: true)
+            }
+            else if type == 6 {
+                textType = "SShape_img"
+                self.bufferBlock = SShape(column: Int(col),row: 25, vertical: true)
+            }
             self.block = self.bufferBlock
             isFirstBlock = false
         }
@@ -221,7 +253,9 @@ class GameScene: SKScene {
             
             self.LeftMoveDelay = 0.0
             self.RightMoveDelay = 0.0
-            block.rotate()
+            if(block.mayRotate){
+                block.rotate()
+            }
         }
     }
     
@@ -257,8 +291,21 @@ class GameScene: SKScene {
                 if(isFullLine){
                     animateFullLine(row)
                     animateFallingBlocks(row)
+                    currentScore = currentScore + 100
+                    if(currentScore == 200){
+                        level = 2
+                    }else if(currentScore == 500){
+                        level = 3
+                    }else if(currentScore == 800){
+                        level = 4
+                    }else if(currentScore == 1300){
+                        level = 5
+                    }else if(currentScore == 2000){
+                        level = 6
+                    }
                     if let handler = FullLineHandler {
-                        handler(row,100)
+                        linesCleared = linesCleared + 1
+                        handler(row,100,linesCleared,level)
                     }
                 }
             }
