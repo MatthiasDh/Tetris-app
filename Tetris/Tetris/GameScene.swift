@@ -33,8 +33,8 @@ class GameScene: SKScene {
     var bufferBlock: Block!
     
     
-    let MoveLeftLabel = SKLabelNode(text: "LEFT")
-    let MoveRightLabel = SKLabelNode(text: "RIGHT")
+    let MoveLeftLabel = SKLabelNode(fontNamed: "Gill Sans UltraBold")
+    let MoveRightLabel = SKLabelNode(fontNamed: "Gill Sans UltraBold")
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder) is not used in this app")

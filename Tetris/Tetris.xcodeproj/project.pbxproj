@@ -15,6 +15,7 @@
 		0C0B2B321FF7CC130008B988 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B311FF7CC130008B988 /* PlayerCell.swift */; };
 		0C82D6E51FE02F19008AB6A4 /* TShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C82D6E41FE02F19008AB6A4 /* TShape.swift */; };
 		0C82D6EA1FE08294008AB6A4 /* MirroredLShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C82D6E91FE08294008AB6A4 /* MirroredLShape.swift */; };
+		0CA292861FFFED4000199BDB /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA292851FFFED4000199BDB /* UITextField.swift */; };
 		0CF285751FE2BD0D006DE6DA /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF285741FE2BD0D006DE6DA /* SShape.swift */; };
 		0CF285771FE2BD7F006DE6DA /* LShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF285761FE2BD7F006DE6DA /* LShape.swift */; };
 		2F9E7F5F960A2CCD07C92335 /* Pods_Tetris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF014344A7E789A1476762A /* Pods_Tetris.framework */; };
@@ -40,6 +41,7 @@
 		0C0B2B311FF7CC130008B988 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		0C82D6E41FE02F19008AB6A4 /* TShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
 		0C82D6E91FE08294008AB6A4 /* MirroredLShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MirroredLShape.swift; sourceTree = "<group>"; };
+		0CA292851FFFED4000199BDB /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		0CF285741FE2BD0D006DE6DA /* SShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
 		0CF285761FE2BD7F006DE6DA /* LShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LShape.swift; sourceTree = "<group>"; };
 		4CBB26CE46908444B15FCA13 /* Pods-Tetris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tetris.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tetris/Pods-Tetris.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0C0B2B181FF51E690008B988 /* UIButtonExtension.swift */,
+				0CA292851FFFED4000199BDB /* UITextField.swift */,
 			);
 			path = CustomControls;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				0C0B2B2F1FF6B4AD0008B988 /* NewPlayerViewController.swift in Sources */,
 				E289C2441FE0375A005CB8F8 /* ZShape.swift in Sources */,
 				0CF285751FE2BD0D006DE6DA /* SShape.swift in Sources */,
+				0CA292861FFFED4000199BDB /* UITextField.swift in Sources */,
 				0C0B2B141FF519B20008B988 /* StartViewController.swift in Sources */,
 				E2D581801FDF2948004D0E97 /* GameViewController.swift in Sources */,
 				0C0B2B321FF7CC130008B988 /* PlayerCell.swift in Sources */,

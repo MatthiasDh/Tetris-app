@@ -198,16 +198,16 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="l2r-q9-erb">
-                                                            <rect key="frame" x="316" y="5" width="54" height="30"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="l2r-q9-erb">
+                                                            <rect key="frame" x="316" y="7" width="54" height="30"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="🏆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZT-gb-x82">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZT-gb-x82">
                                                                     <rect key="frame" x="0.0" y="0.0" width="28" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxJ-S5-fJF">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxJ-S5-fJF">
                                                                     <rect key="frame" x="33" y="0.0" width="21" height="30"/>
                                                                     <fontDescription key="fontDescription" name="GillSans-UltraBold" family="Gill Sans" pointSize="22"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -217,19 +217,11 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dZ5-Au-WUc">
-                                                            <rect key="frame" x="5" y="5" width="202.5" height="32"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dZ5-Au-WUc">
+                                                            <rect key="frame" x="5" y="7" width="166.5" height="29.5"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY5-k0-fGl">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <state key="normal" backgroundImage="icons8-trash"/>
-                                                                    <connections>
-                                                                        <action selector="deletePlayer:" destination="jmU-49-acm" eventType="touchUpInside" id="nd2-oQ-N9j"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Playername" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCJ-Bm-ETf">
-                                                                    <rect key="frame" x="36" y="0.0" width="166.5" height="32"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playername" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCJ-Bm-ETf">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="166.5" height="29.5"/>
                                                                     <fontDescription key="fontDescription" name="GillSans-UltraBold" family="Gill Sans" pointSize="22"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -242,6 +234,8 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="dZ5-Au-WUc" firstAttribute="centerY" secondItem="c5a-p1-67W" secondAttribute="centerY" id="7Fx-ya-ebi"/>
+                                                        <constraint firstItem="l2r-q9-erb" firstAttribute="centerY" secondItem="c5a-p1-67W" secondAttribute="centerY" id="Aps-3T-H8f"/>
                                                         <constraint firstItem="dZ5-Au-WUc" firstAttribute="leading" secondItem="c5a-p1-67W" secondAttribute="leading" constant="5" id="Tk1-m0-upt"/>
                                                         <constraint firstAttribute="trailing" secondItem="l2r-q9-erb" secondAttribute="trailing" constant="5" id="dqo-j7-NrT"/>
                                                     </constraints>
@@ -313,10 +307,10 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fK-am-kNB">
-                                <rect key="frame" x="113.5" y="314" width="147" height="39"/>
+                                <rect key="frame" x="69" y="314" width="236" height="39"/>
                                 <fontDescription key="fontDescription" name="GillSans-UltraBold" family="Gill Sans" pointSize="21"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="Add player">
+                                <state key="normal" title="Add a new player!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -324,15 +318,33 @@
                                     <segue destination="7Hv-cM-D6E" kind="unwind" unwindAction="didUnwindFromNewPlayerVC:" id="QWD-9s-ufe"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Nf-xx-FCQ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Playername" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Nf-xx-FCQ">
                                 <rect key="frame" x="111" y="108" width="152" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" smartInsertDeleteType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPP-yF-kQI">
+                                <rect key="frame" x="0.0" y="0.0" width="185" height="34"/>
+                                <fontDescription key="fontDescription" name="GillSans-UltraBold" family="Gill Sans" pointSize="17"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="&lt; Return to menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jmU-49-acm" kind="modal" id="ftR-l2-dsq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="EPP-yF-kQI" firstAttribute="top" secondItem="dNM-WU-lFy" secondAttribute="top" id="1VO-T2-IV4"/>
                             <constraint firstItem="A87-zE-tFa" firstAttribute="top" secondItem="ABV-7W-jDl" secondAttribute="bottom" constant="62" id="7Rm-NP-Kiw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Nf-xx-FCQ" secondAttribute="trailing" constant="96" id="8gG-HC-x1b"/>
                             <constraint firstItem="eGi-fV-uwT" firstAttribute="top" secondItem="dNM-WU-lFy" secondAttribute="top" id="MVY-jk-OoV"/>
@@ -340,6 +352,7 @@
                             <constraint firstItem="7Nf-xx-FCQ" firstAttribute="centerX" secondItem="dNM-WU-lFy" secondAttribute="centerX" id="R1H-iz-WIq"/>
                             <constraint firstItem="A87-zE-tFa" firstAttribute="centerX" secondItem="dNM-WU-lFy" secondAttribute="centerX" id="c2h-by-Q8R"/>
                             <constraint firstItem="7Nf-xx-FCQ" firstAttribute="top" secondItem="A87-zE-tFa" secondAttribute="bottom" id="eVZ-du-SQ7"/>
+                            <constraint firstItem="EPP-yF-kQI" firstAttribute="leading" secondItem="dNM-WU-lFy" secondAttribute="leading" id="knM-cE-OhL"/>
                             <constraint firstItem="7Nf-xx-FCQ" firstAttribute="leading" secondItem="dNM-WU-lFy" secondAttribute="leadingMargin" constant="95" id="oMa-Q9-JH1"/>
                             <constraint firstItem="1fK-am-kNB" firstAttribute="centerX" secondItem="dNM-WU-lFy" secondAttribute="centerX" id="r2q-Ud-pG2"/>
                             <constraint firstAttribute="trailing" secondItem="eGi-fV-uwT" secondAttribute="trailing" id="veQ-36-VlZ"/>
@@ -417,10 +430,10 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIc-Je-avU">
-                                <rect key="frame" x="0.0" y="0.0" width="154" height="34"/>
+                                <rect key="frame" x="0.0" y="0.0" width="185" height="34"/>
                                 <fontDescription key="fontDescription" name="GillSans-UltraBold" family="Gill Sans" pointSize="17"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="&lt; Exit to menu">
+                                <state key="normal" title="&lt; Return to menu">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -459,6 +472,8 @@
     </scenes>
     <resources>
         <image name="background_start" width="1080" height="1920"/>
-        <image name="icons8-trash" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ftR-l2-dsq"/>
+    </inferredMetricsTieBreakers>
 </document>

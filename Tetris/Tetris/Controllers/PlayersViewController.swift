@@ -7,8 +7,9 @@ class PlayersViewController: UIViewController {
  
     @IBOutlet weak var btnAddPlayer: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBAction func deletePlayer(_ sender: UIButton) {
+
+    override func viewDidAppear(_ animated: Bool) {
+        btnAddPlayer.pulsate()
     }
     
     override func viewDidLoad() {
@@ -60,5 +61,20 @@ extension PlayersViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! PlayerCell
         cell.player = players[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        let modifyAction = UIContextualAction(style: .normal, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(self.players[indexPath.row])
+            }
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        })
+        modifyAction.title = "Delete"
+        modifyAction.backgroundColor = .red
+        return UISwipeActionsConfiguration(actions: [modifyAction])
     }
 }

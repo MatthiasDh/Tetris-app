@@ -23,7 +23,7 @@ class StartViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-            btnStart.pulsate()
+        btnStart.pulsate()
     }
     
     override var prefersStatusBarHidden: Bool {
