@@ -4,16 +4,18 @@ import UIKit
 class PlayersViewController: UIViewController {
     private var indexPathPlayer: IndexPath!
     var players: Results<Player>!
- 
+    
     @IBOutlet weak var btnAddPlayer: UIButton!
     @IBOutlet weak var tableView: UITableView!
-
+    
     override func viewDidAppear(_ animated: Bool) {
         btnAddPlayer.pulsate()
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad() {  
+        //Get realm objects
         players = try! Realm().objects(Player.self)
+        
         //Tableview design
         tableView.separatorStyle = .none
         print(Realm.Configuration.defaultConfiguration.fileURL!)
@@ -21,11 +23,11 @@ class PlayersViewController: UIViewController {
     
     @IBAction func didUnwindFromNewPlayerVC(_ sender: UIStoryboardSegue){
         guard let newPlayerVC = sender.source as? NewPlayerViewController else { return }
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(newPlayerVC.player!)
-        }
-        tableView.insertRows(at: [IndexPath(row: players.count - 1, section: 0)], with: .automatic)
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(newPlayerVC.player!)
+            }
+                tableView.insertRows(at: [IndexPath(row: players.count - 1, section: 0)], with: .automatic)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -63,18 +65,17 @@ extension PlayersViewController: UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView,
-                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
-    {
-        let modifyAction = UIContextualAction(style: .normal, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
+            (action, view, completionHandler) in
+            let player = self.players[indexPath.row]
             let realm = try! Realm()
             try! realm.write {
-                realm.delete(self.players[indexPath.row])
+                realm.delete(player)
             }
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
-        })
-        modifyAction.title = "Delete"
-        modifyAction.backgroundColor = .red
-        return UISwipeActionsConfiguration(actions: [modifyAction])
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            completionHandler(true)
+        }
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }

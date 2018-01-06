@@ -23,14 +23,16 @@ class Block {
     var TileWidth: CGFloat
     var spriteName: String?
     var mayRotate: Bool
+    var rightBound: CGFloat
     
-    init(column: Int, row: Int, vertical: Bool) {
+    init(column: Int, row: Int, vertical: Bool, tileWidth: CGFloat) {
         self.column = column
         self.row = row
-        self.vertical = vertical;
-        self.TileHeight = 40
-        self.TileWidth = 40
+        self.vertical = vertical
+        self.TileHeight = tileWidth
+        self.TileWidth = tileWidth
         self.mayRotate = true
+        self.rightBound = (tileWidth * 10)
     }
     
     func rotate() {}

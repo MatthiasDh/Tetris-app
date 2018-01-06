@@ -15,14 +15,15 @@ class GameScene: SKScene {
     var blocksLayer = SKNode()
     
     let NumColumns = 11
-    let NumRows = 22
+    let NumRows = 18
     
     var currentScore = 0
     var level = 1
     var linesCleared = 0
     var isFirstBlock = true
     var isGameOver = false
-    var MoveDelay = 0.15
+    var MoveDelay = 0.3
+    var defaultMoveDelay = 0.3
     var LeftMoveDelay = 0.0
     var RightMoveDelay = 0.0
     var moveLeftAllowed = false
@@ -111,9 +112,12 @@ class GameScene: SKScene {
         //let type = 5
         
         if(self.block != nil){
-            if(self.block.row >= 22) {
+            if(self.block.row >= 18) {
                 self.isGameOver = true
                 if let handler = GameOverHandler {
+                    self.moveLeftAllowed = false
+                    self.moveRightAllowed = false
+                    self.isUserInteractionEnabled = false
                     handler()
                 }
             }
@@ -122,31 +126,31 @@ class GameScene: SKScene {
         if(isFirstBlock) {
             if (type == 0) {
                 textType = "LineShape_img"
-                self.bufferBlock = LineShape(column: Int(col), row: 25, vertical: true)
+                self.bufferBlock = LineShape(column: Int(col), row: 21, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 1 {
                 textType = "SquareShape_img"
-                self.bufferBlock = SquareShape(column: Int(col), row: 25, vertical: true)
+                self.bufferBlock = SquareShape(column: Int(col), row: 21, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 2 {
                 textType = "TShape_img"
-                self.bufferBlock = TShape(column: Int(col), row: 25, vertical: true)
+                self.bufferBlock = TShape(column: Int(col), row: 21, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 3 {
                 textType = "ZShape_img"
-                self.bufferBlock = ZShape(column: Int(col), row: 25, vertical: true)
+                self.bufferBlock = ZShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 4 {
                 textType = "MirroredLShape_img"
-                self.bufferBlock = MirroredLShape(column: Int(col), row: 25, vertical: true)
+                self.bufferBlock = MirroredLShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 5 {
                 textType = "LShape_img"
-                self.bufferBlock = LShape(column: Int(col),row: 25, vertical: true)
+                self.bufferBlock = LShape(column: Int(col),row: 25, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 6 {
                 textType = "SShape_img"
-                self.bufferBlock = SShape(column: Int(col),row: 25, vertical: true)
+                self.bufferBlock = SShape(column: Int(col),row: 25, vertical: true, tileWidth: self.TileWidth)
             }
             self.block = self.bufferBlock
             isFirstBlock = false
@@ -156,31 +160,31 @@ class GameScene: SKScene {
             self.block = self.bufferBlock
             if (type == 0) {
                 textType = "LineShape_img"
-                self.bufferBlock = LineShape(column: Int(col), row: 25, vertical: true)
+                self.bufferBlock = LineShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 1 {
                 textType = "SquareShape_img"
-                self.bufferBlock = SquareShape(column: Int(col), row: 25, vertical: true)
+                self.bufferBlock = SquareShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 2 {
                 textType = "TShape_img"
-                self.bufferBlock = TShape(column: Int(col), row: 25, vertical: true)
+                self.bufferBlock = TShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 3 {
                 textType = "ZShape_img"
-                self.bufferBlock = ZShape(column: Int(col), row: 25, vertical: true)
+                self.bufferBlock = ZShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 4 {
                 textType = "MirroredLShape_img"
-                self.bufferBlock = MirroredLShape(column: Int(col), row: 25, vertical: true)
+                self.bufferBlock = MirroredLShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 5 {
                 textType = "LShape_img"
-                self.bufferBlock = LShape(column: Int(col),row: 25, vertical: true)
+                self.bufferBlock = LShape(column: Int(col),row: 25, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 6 {
                 textType = "SShape_img"
-                self.bufferBlock = SShape(column: Int(col),row: 25, vertical: true)
+                self.bufferBlock = SShape(column: Int(col),row: 25, vertical: true, tileWidth: self.TileWidth)
             }
             
             if let handler = BufferBlockHandler {
@@ -203,14 +207,13 @@ class GameScene: SKScene {
             self.MoveDelay -= dt
             
             if (self.MoveDelay <= 0) {
-                
                 if block.checkBlocksUnder(blocksLayer: blocksLayer) {
                     detectFullLines()
                     generateBlock()
                 }else{
                     block.move()
                 }
-                self.MoveDelay = 0.15
+                self.MoveDelay = self.defaultMoveDelay
             }
             
             if moveLeftAllowed {
@@ -294,15 +297,33 @@ class GameScene: SKScene {
                     currentScore = currentScore + 100
                     if(currentScore == 200){
                         level = 2
+                        self.defaultMoveDelay = 0.25
                     }else if(currentScore == 500){
                         level = 3
-                    }else if(currentScore == 800){
+                        self.defaultMoveDelay = 0.20
+                    }else if(currentScore == 1100){
                         level = 4
-                    }else if(currentScore == 1300){
+                        self.defaultMoveDelay = 0.15
+                    }else if(currentScore == 1900){
                         level = 5
-                    }else if(currentScore == 2000){
+                        self.defaultMoveDelay = 0.12
+                    }else if(currentScore == 2700){
                         level = 6
+                        self.defaultMoveDelay = 0.10
+                    }else if(currentScore == 3500){
+                        level = 7
+                        self.defaultMoveDelay = 0.8
+                    }else if(currentScore == 5000){
+                        level = 8
+                        self.defaultMoveDelay = 0.7
+                    }else if(currentScore == 7000){
+                        level = 9
+                        self.defaultMoveDelay = 0.6
+                    }else if(currentScore == 10000){
+                        level = 10
+                        self.defaultMoveDelay = 0.5
                     }
+                    
                     if let handler = FullLineHandler {
                         linesCleared = linesCleared + 1
                         handler(row,100,linesCleared,level)

@@ -33,6 +33,9 @@ class StartViewController: UIViewController {
     @IBAction func didUnwindFromGameVC(_ sender: UIStoryboardSegue){
         self.score = Int(self.highscore.text!)!
         guard var gameVC = sender.source as? GameViewController else { return }
+        //Stop the music
+        gameVC.backgroundPlayer.stop()
+        
         //If it is a highscore then change the score on the startscreen
         if(gameVC.highscore > self.score){
             self.highscore.text = gameVC.lblScore.text

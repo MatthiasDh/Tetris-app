@@ -4,11 +4,10 @@ import SpriteKit
 
 class SquareShape : Block {
     
-    override init(column: Int, row: Int, vertical: Bool) {
-        super.init(column: column, row: row, vertical: vertical)
+    override init(column: Int, row: Int, vertical: Bool, tileWidth: CGFloat) {
+        super.init(column: column, row: row, vertical: vertical, tileWidth: tileWidth)
         self.column = column
         self.row = row
-        self.TileHeight = 40
         self.spriteName = "yellow"
     }
     
@@ -24,7 +23,7 @@ class SquareShape : Block {
         sprite4?.position.y = (sprite4?.position.y)!-self.TileHeight;
     }
     override func moveLeft() {
-        if((sprite1?.position.x)! >= TileWidth/2 && (sprite2?.position.x)! >= TileWidth/2 && (sprite3?.position.x)! >= TileWidth/2 && (sprite4?.position.x)! >= TileWidth/2){
+        if((sprite1?.position.x)! >= TileWidth && (sprite2?.position.x)! >= TileWidth && (sprite3?.position.x)! >= TileWidth && (sprite4?.position.x)! >= TileWidth){
             self.mayRotate = true
             sprite1?.position.x = (sprite1?.position.x)!-self.TileHeight;
             sprite2?.position.x = (sprite2?.position.x)!-self.TileHeight;
@@ -35,7 +34,7 @@ class SquareShape : Block {
         }
     }
     override func moveRight() {
-        if((sprite1?.position.x)! <= 271 && (sprite2?.position.x)! <= 271 && (sprite3?.position.x)! <= 271 && (sprite4?.position.x)! <= 271){
+        if((sprite1?.position.x)! <= self.rightBound && (sprite2?.position.x)! <= self.rightBound && (sprite3?.position.x)! <= self.rightBound && (sprite4?.position.x)! <= self.rightBound){
             self.mayRotate = true
             sprite1?.position.x = (sprite1?.position.x)!+self.TileHeight;
             sprite2?.position.x = (sprite2?.position.x)!+self.TileHeight;

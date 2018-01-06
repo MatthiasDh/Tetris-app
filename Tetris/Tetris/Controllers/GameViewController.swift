@@ -1,23 +1,38 @@
 import UIKit
 import SpriteKit
+import AVFoundation
 
 class GameViewController: UIViewController {
     var scene: GameScene!
     var highscore: Int = 0
+    var backgroundPlayer : AVAudioPlayer!
     
+    @IBOutlet weak var stackViewGameOver: UIStackView!
     @IBOutlet weak var txtLevel: UILabel!
     @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var imgBufferBlock: UIImageView!
     @IBOutlet weak var txtLinesCleared: UILabel!
+    @IBOutlet weak var toggleMusic: UIButton!
     
     @IBAction func exitGame(_ sender: UIButton) {
         self.scene.removeAllActions()
         self.scene.removeAllChildren()
         self.scene.removeFromParent()
         self.scene = nil
-        handleGameOver()
     }
     
+    @IBAction func toggleMusic(_ sender: Any) {
+        print("toggle")
+        if(toggleMusic.currentTitle == "🔈"){
+            print("muted")
+            backgroundPlayer.stop()
+            toggleMusic.setTitle("🔇", for: .normal)
+        }else{
+            print("not muted")
+            backgroundPlayer.play()
+            toggleMusic.setTitle("🔈", for: .normal)
+        }
+    }
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -32,7 +47,8 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        playMusic()
+        stackViewGameOver.isHidden = true
         // Configure the view that displays spritecontent.
         let skView = view as! SKView
         skView.isMultipleTouchEnabled = false
@@ -44,12 +60,21 @@ class GameViewController: UIViewController {
         scene.addTiles()
         scene.FullLineHandler = handleFullLine
         scene.BufferBlockHandler = handleBufferBlock
+        scene.GameOverHandler = handleGameOver
         scene.generateBlock()
         
         // Present the scene.
         skView.presentScene(scene)
     }
-
+    
+    func playMusic(){
+        //Background music
+        let url = Bundle.main.url(forResource: "backgroundmusic.wav", withExtension: nil)
+        backgroundPlayer = try! AVAudioPlayer(contentsOf: url!)
+        backgroundPlayer.numberOfLoops = -1
+        backgroundPlayer.prepareToPlay()
+        backgroundPlayer.play()
+    }
     override func viewDidAppear(_ animated: Bool) {
     }
     
@@ -69,6 +94,6 @@ class GameViewController: UIViewController {
     }
     
     func handleGameOver() {
-        
+        stackViewGameOver.isHidden = false
     }
 }

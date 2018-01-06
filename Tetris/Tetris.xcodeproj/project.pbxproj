@@ -13,6 +13,7 @@
 		0C0B2B271FF6ACB10008B988 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B261FF6ACB10008B988 /* PlayersViewController.swift */; };
 		0C0B2B2F1FF6B4AD0008B988 /* NewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B2E1FF6B4AD0008B988 /* NewPlayerViewController.swift */; };
 		0C0B2B321FF7CC130008B988 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B2B311FF7CC130008B988 /* PlayerCell.swift */; };
+		0C0EDC3220002DC00035F321 /* backgroundmusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EDC3120002DC00035F321 /* backgroundmusic.wav */; };
 		0C82D6E51FE02F19008AB6A4 /* TShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C82D6E41FE02F19008AB6A4 /* TShape.swift */; };
 		0C82D6EA1FE08294008AB6A4 /* MirroredLShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C82D6E91FE08294008AB6A4 /* MirroredLShape.swift */; };
 		0CA292861FFFED4000199BDB /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA292851FFFED4000199BDB /* UITextField.swift */; };
@@ -39,6 +40,7 @@
 		0C0B2B261FF6ACB10008B988 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		0C0B2B2E1FF6B4AD0008B988 /* NewPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerViewController.swift; sourceTree = "<group>"; };
 		0C0B2B311FF7CC130008B988 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		0C0EDC3120002DC00035F321 /* backgroundmusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = backgroundmusic.wav; sourceTree = "<group>"; };
 		0C82D6E41FE02F19008AB6A4 /* TShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
 		0C82D6E91FE08294008AB6A4 /* MirroredLShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MirroredLShape.swift; sourceTree = "<group>"; };
 		0CA292851FFFED4000199BDB /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		E2D581761FDF2948004D0E97 /* Tetris */ = {
 			isa = PBXGroup;
 			children = (
+				0C0EDC3120002DC00035F321 /* backgroundmusic.wav */,
 				0C0B2B301FF7CC070008B988 /* View */,
 				0C0B2B231FF6913C0008B988 /* Model */,
 				0C0B2B151FF51CC80008B988 /* CustomControls */,
@@ -241,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0EDC3220002DC00035F321 /* backgroundmusic.wav in Resources */,
 				E2D581831FDF2948004D0E97 /* Main.storyboard in Resources */,
 				E2D581851FDF2948004D0E97 /* Assets.xcassets in Resources */,
 				E2D581881FDF2948004D0E97 /* LaunchScreen.storyboard in Resources */,
