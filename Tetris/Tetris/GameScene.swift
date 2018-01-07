@@ -126,31 +126,31 @@ class GameScene: SKScene {
         if(isFirstBlock) {
             if (type == 0) {
                 textType = "LineShape_img"
-                self.bufferBlock = LineShape(column: Int(col), row: 21, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = LineShape(column: Int(col), row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 1 {
                 textType = "SquareShape_img"
-                self.bufferBlock = SquareShape(column: Int(col), row: 21, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = SquareShape(column: Int(col), row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 2 {
                 textType = "TShape_img"
-                self.bufferBlock = TShape(column: Int(col), row: 21, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = TShape(column: Int(col), row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 3 {
                 textType = "ZShape_img"
-                self.bufferBlock = ZShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = ZShape(column: Int(col), row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 4 {
                 textType = "MirroredLShape_img"
-                self.bufferBlock = MirroredLShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = MirroredLShape(column: Int(col), row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 5 {
                 textType = "LShape_img"
-                self.bufferBlock = LShape(column: Int(col),row: 25, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = LShape(column: Int(col),row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 6 {
                 textType = "SShape_img"
-                self.bufferBlock = SShape(column: Int(col),row: 25, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = SShape(column: Int(col),row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             self.block = self.bufferBlock
             isFirstBlock = false
@@ -160,31 +160,31 @@ class GameScene: SKScene {
             self.block = self.bufferBlock
             if (type == 0) {
                 textType = "LineShape_img"
-                self.bufferBlock = LineShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = LineShape(column: Int(col), row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 1 {
                 textType = "SquareShape_img"
-                self.bufferBlock = SquareShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = SquareShape(column: Int(col), row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 2 {
                 textType = "TShape_img"
-                self.bufferBlock = TShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = TShape(column: Int(col), row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 3 {
                 textType = "ZShape_img"
-                self.bufferBlock = ZShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = ZShape(column: Int(col), row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 4 {
                 textType = "MirroredLShape_img"
-                self.bufferBlock = MirroredLShape(column: Int(col), row: 25, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = MirroredLShape(column: Int(col), row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 5 {
                 textType = "LShape_img"
-                self.bufferBlock = LShape(column: Int(col),row: 25, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = LShape(column: Int(col),row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             else if type == 6 {
                 textType = "SShape_img"
-                self.bufferBlock = SShape(column: Int(col),row: 25, vertical: true, tileWidth: self.TileWidth)
+                self.bufferBlock = SShape(column: Int(col),row: 20, vertical: true, tileWidth: self.TileWidth)
             }
             
             if let handler = BufferBlockHandler {
