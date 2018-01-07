@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,29 +20,32 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_start" translatesAutoresizingMaskIntoConstraints="NO" id="efT-9S-nSt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_start" translatesAutoresizingMaskIntoConstraints="NO" id="efT-9S-nSt">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading Tetris..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLB-FS-dXj">
-                                <rect key="frame" x="45" y="469" width="285.5" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Tetris..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLB-FS-dXj">
+                                <rect key="frame" x="167" y="639.5" width="690" height="87"/>
                                 <fontDescription key="fontDescription" name="GillSans-UltraBold" family="Gill Sans" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="2" height="2"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="GillSans-UltraBold" family="Gill Sans" pointSize="68"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="efT-9S-nSt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2jJ-cC-FIH"/>
-                            <constraint firstItem="efT-9S-nSt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EPZ-Tn-ilU"/>
-                            <constraint firstItem="efT-9S-nSt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="V5A-b6-g4z"/>
-                            <constraint firstItem="TLB-FS-dXj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="aTG-8m-qiV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TLB-FS-dXj" secondAttribute="bottom" constant="50" id="gVE-MN-cyI"/>
-                            <constraint firstItem="efT-9S-nSt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="n6j-lj-WDi"/>
+                            <constraint firstItem="efT-9S-nSt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="EEh-qW-Nj4"/>
+                            <constraint firstItem="TLB-FS-dXj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XNq-Lf-jeG"/>
+                            <constraint firstItem="efT-9S-nSt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XSc-Zg-SbE"/>
+                            <constraint firstItem="efT-9S-nSt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="alZ-7w-rLt"/>
+                            <constraint firstItem="TLB-FS-dXj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="b9x-Px-6wp"/>
+                            <constraint firstItem="efT-9S-nSt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="s5e-A2-n5a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

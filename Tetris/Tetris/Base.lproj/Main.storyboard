@@ -242,7 +242,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="l2r-q9-erb">
-                                                            <rect key="frame" x="316" y="7" width="54" height="30"/>
+                                                            <rect key="frame" x="355" y="7" width="54" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZT-gb-x82">
                                                                     <rect key="frame" x="0.0" y="0.0" width="28" height="30"/>
@@ -364,7 +364,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Playername" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Nf-xx-FCQ">
                                 <rect key="frame" x="90" y="122" width="234" height="30"/>
                                 <color key="backgroundColor" red="0.99993366003036499" green="1" blue="0.99988192319869995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="0.99993366003036499" green="1" blue="0.99988192319869995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.047426216304302216" green="0.018842780962586403" blue="0.010518915951251984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" smartInsertDeleteType="no"/>
                                 <userDefinedRuntimeAttributes>
